@@ -1,0 +1,129 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* $itemGrow: 1.2;
+$duration: 250ms; */
+
+html {
+	scroll-behavior: smooth;
+  }
+*{
+	margin:0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#nav-bar
+{
+	position:sticky;
+	top: 0;
+	z-index:10;
+	
+	
+	
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav 
+{
+  	overflow: hidden;
+	
+	
+ 	
+}
+
+/* Style the links inside the navigation bar */
+.topnav a 
+{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 26px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #c94815;
+  
+}
+
+.navbarNav ul .li
+{
+	color: white;
+	background-color: black;
+}
+
+.topnav a 
+{
+  	background-color: white;
+	font-size: 20px;
+  
+}
+.navbar-brand img
+{
+	height:100px;
+	padding-left:0;
+	
+}
+
+.navbar-nav li
+{
+	padding: 0 10px;
+}
+
+.navbar-nav li a
+{
+	float: right;
+	text-align: left;
+	font-size: 20px;
+	
+	background-color: #c94815;
+	
+  	
+	
+}
+
+
+#nav-bar ul li a:hover
+{
+	color:#d3c8af!important;
+}
+
+.navbar
+{
+	background-color: #c94815;
+	margin-bottom: 0px;
+	
+}
+
+.navbar-toggler
+{
+	border: none;
+	
+}
+
+.navbar-link
+{
+	color:#555!important;
+	font-weight:600;
+	font-size:16px;
+}
+
+
+#Slider
+{
+	
+	width: auto;
+	height: 240px;;
+}
+
