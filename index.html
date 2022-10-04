@@ -1,65 +1,412 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>Home | MerchStore</title>
-	<meta charset="utf-8" />
-	<meta name="viewpoint" content="width=device-width,initial-scal=1.0">
-	<meta http-equip="X-UA-compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles/style.css" media="screen" type="text/css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/jquery.store.js"></script>
-	<script type="text/javascript" src="scripts/main.js"></script>
-	<script type="text/javascript"
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	
+
+	<!--=============== BOXICONS ===============-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+	<!--=============== SWIPER CSS ===============--> 
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+	<!--=============== CSS ===============-->
+	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<title>Pet Store</title>
 </head>
-
 <body>
+	<!--==================== HEADER ====================-->
+	<header class="header" id="header">
+		<nav class="nav container">
+			<a href="#" class="nav__logo">
+				<i class='bx bxs-dog nav__logo-icon'></i> Pet Mart
+			</a>
 
-	<section id="nav-bar">
-		<nav class="navbar navbar-expand-lg navbar-light">
-			<h1>MerchStore</h1>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-
-				<ul class="navbar-nav ml-auto">
-
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="#new-arrivals">Products</a>
+			<div class="nav__menu" id="nav-menu">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#home" class="nav__link active-link">Home</a>
 					</li>
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="cart.html">Cart</a>
-
+					<li class="nav__item">
+						<a href="#featured" class="nav__link">Featured</a>
 					</li>
-
-
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="#about">About Us</a>
+					<li class="nav__item">
+						<a href="#products" class="nav__link">Pharmacy / Pets Medicines</a>
 					</li>
-
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="#services">Our Services</a>
-					</li>
-
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="#team" tabindex="-1" aria-disabled="true">Our
-							Team</a>
-					</li>
-					<li class="nav-item">
-						<a style="color:black;" class="nav-link" href="#contact">Contact</a>
-					</li>
-
-
+					
 				</ul>
+
+				<div class="nav__close" id="nav-close">
+					<i class='bx bx-x' ></i>
+				</div>
+			</div>
+
+			<div class="nav__btns">
+				<!-- Theme change button -->
+				<i class='bx bx-moon change-theme' id="theme-button"></i>
+
+				<div class="nav__shop" id="cart-shop">
+					<i class='bx bx-shopping-bag' ></i>
+				</div>
+
+				<div class="nav__toggle" id="nav-toggle">
+					<i class='bx bx-grid-alt' ></i>
+				</div>
 			</div>
 		</nav>
+	</header>
 
-    
+	<!--==================== CART ====================-->
+	<div class="cart" id="cart">
+		<i class='bx bx-x cart__close' id="cart-close"></i>
+
+		<h2 class="cart__title-center">My Cart</h2>
+
+		<div class="cart__container">
+			<article class="cart__card">
+				<div class="cart__box">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2022/08/IMG_20220823_095907-01-scaled-269x269.jpeg" alt="" class="cart__img">
+				</div>
+
+				<div class="cart__details">
+					<h3 class="cart__title">Birbo Cat Chicken</h3>
+					<span class="cart__price">RS:1,399</span>
+
+					<div class="cart__amount">
+						<div class="cart__amount-content">
+							<span class="cart__amount-box">
+								<i class='bx bx-minus' ></i>
+							</span>
+
+							<span class="cart__amount-number">1</span>
+
+							<span class="cart__amount-box">
+								<i class='bx bx-plus' ></i>
+							</span>
+						</div>
+
+						<i class='bx bx-trash-alt cart__amount-trash' ></i>
+					</div>
+				</div>
+			</article>
+			
+			<article class="cart__card">
+				<div class="cart__box">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2022/06/food3049871605268967299406-300x300.png" alt="" class="cart__img">
+				</div>
+
+				<div class="cart__details">
+					<h3 class="cart__title">Angelic Bentonite Litter</h3>
+					<span class="cart__price">RS:1,999</span>
+
+					<div class="cart__amount">
+						<div class="cart__amount-content">
+							<span class="cart__amount-box">
+								<i class='bx bx-minus' ></i>
+							</span>
+
+							<span class="cart__amount-number">1</span>
+
+							<span class="cart__amount-box">
+								<i class='bx bx-plus' ></i>
+							</span>
+						</div>
+
+						<i class='bx bx-trash-alt cart__amount-trash' ></i>
+					</div>
+				</div>
+			</article>
+
+			<article class="cart__card">
+				<div class="cart__box">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2020/05/pawcomfort-litter-300x300.jpg" alt="" class="cart__img">
+				</div>
+
+				<div class="cart__details">
+					<h3 class="cart__title">Paw Comfort Clumpy Litter
+						</h3>
+					<span class="cart__price">RS:3,999</span>
+
+					<div class="cart__amount">
+						<div class="cart__amount-content">
+							<span class="cart__amount-box">
+								<i class='bx bx-minus' ></i>
+							</span>
+
+							<span class="cart__amount-number">1</span>
+
+							<span class="cart__amount-box">
+								<i class='bx bx-plus' ></i>
+							</span>
+						</div>
+
+						<i class='bx bx-trash-alt cart__amount-trash' ></i>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div class="cart__prices">
+			<span class="cart__prices-item">3 items</span>
+			<span class="cart__prices-total">Sign in for checkout</span>
+		</div>
+	</div>
+
+	<!--==================== MAIN ====================-->
+	<main class="main">
+		<!--==================== HOME ====================-->
+		<section class="home" id="home">
+			<div class="home__container container grid">
+				<div class="home__img-bg">
+					<img src="https://images.unsplash.com/photo-1601758174609-3a789c37dfa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="home__img">
+				</div>
+
+				
+
+				<div class="home__data">
+					<h1 class="home__title">Pets Store</h1>
+					<p class="home__description">
+						Pet grooming services are part of our pet store - PET SHOP PAK available in Karachi for your pet cat dog rabbit and parrots. For appointments please Call or WhatsApp 0333-3811332 Follow our Facebook page for proper updates
+					</p>
+					
+
+					
+				</div>
+			</div>
+		</section>
+
+		<!--==================== FEATURED ====================-->
+		<section class="featured section container" id="featured">
+			<h2 class="section__title">
+				Featured
+			</h2>
+
+			<div class="featured__container grid">
+				<article class="featured__card">
+					<span class="featured__tag">Sale</span>
+
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2022/08/IMG_20220823_095907-01-scaled-269x269.jpeg" alt="" class="featured__img">
+
+					<div class="featured__data">
+						<h3 class="featured__title">Birbo Cat Chicken</h3>
+						<span class="featured__price">RS: 1,399</span>
+					</div>
+
+					<button class="button featured__button">ADD TO CART</button>
+				</article>
+
+				<article class="featured__card">
+					<span class="featured__tag">Sale</span>
+
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2022/07/paw-paw-adult-269x269.jpg" alt="" class="featured__img">
+
+					<div class="featured__data">
+						<h3 class="featured__title">Paw Paw Dog Adult</h3>
+						<span class="featured__price">RS: 2,500</span>
+					</div>
+
+					<button class="button featured__button">ADD TO CART</button>
+				</article>
+
+				<article class="featured__card">
+					<span class="featured__tag">Sale</span>
+
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2021/06/IMG_20210619_232452-300x300.jpg" alt="" class="featured__img">
+
+					<div class="featured__data">
+						<h3 class="featured__title">Reflex Plus Adult Cat Gourmet</h3>
+						<span class="featured__price">RS: 2,999</span>
+					</div>
+
+					<button class="button featured__button">ADD TO CART</button>
+				</article>
+			</div>
+		</section>
+
+		<!--==================== STORY ====================-->
+		<section class="story section container">
+			<div class="story__container grid">
+				<div class="story__data">
+					
+
+					<h1 class="story__title">
+						Online Pet Food Store
+					</h1>
+
+					<p class="story__description">
+						Online Pet Store in Pakistan provides thousands of pet food products listed on the website of the best and most reliable brands like Royal Canin, Nutragold, Reflex, Bonnie, Mera, Meow Mix, Mr. Pet, Whiskas, and Taste of wild. Under one roof with the best prices and availability, there is no other reliable Online Shopping Store for genuine products. The primary objective is to provide the best online shopping experience and the best customer service possible to the customers.
+
+						Petshub isn’t limited to some of the major cities but delivers all across Pakistan. So, no matter where you are, we will provide your favorite pet food or high-quality imported accessories, especially for cats and dogs, to your doorstep. Cash on delivery is yet another luxury for our customers, ensuring they will pay only when the item arrives at their doorstep.
+					</p>
+
+					<a href="#" class="button button--small">Discover</a>
+				</div>
+
+				<div class="story__images">
+					<img src="https://images.unsplash.com/photo-1601758003081-cc85332409de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="story__img">
+					<div class="story__square"></div>
+				</div>
+			</div>
+		</section>
+
+		<!--==================== PRODUCTS ====================-->
+		<br>
+		<br>
+		<br>
+		<section class="products section container" id="products">
+			<h2 class="section__title">
+				Products
+			</h2>
+
+			<div class="products__container grid">
+				<article class="products__card">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2018/09/IMG_20180817_201752-scaled-300x300.jpg" alt="" class="products__img">
+
+					<h3 class="products__title">Active Parrots Spray</h3>
+					<span class="products__price">RS:499</span>
+
+					<button class="products__button">
+						<i class='bx bx-shopping-bag'></i>
+					</button>
+				</article>
+
+				<article class="products__card">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2021/09/IMG_20210905_122342-01-300x300.jpeg" alt="" class="products__img">
+
+					<h3 class="products__title">Hartz UltraGuard Plus</h3>
+					<span class="products__price">RS:1,4999</span>
+
+					<button class="products__button">
+						<i class='bx bx-shopping-bag'></i>
+					</button>
+				</article>
+
+				<article class="products__card">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2021/08/IMG_20210810_094347-300x300.jpg" alt="" class="products__img">
+
+					<h3 class="products__title">ROLLON Oral Care Pro – Plaque</h3>
+					<span class="products__price">RS:1,110</span>
+
+					<button class="products__button">
+						<i class='bx bx-shopping-bag'></i>
+					</button>
+				</article>
+
+				<article class="products__card">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2021/05/LogoLicious_20210528_115418-scaled-300x300.jpg" alt="" class="products__img">
+
+					<h3 class="products__title">Purelab 3X Stain & Odor Remover</h3>
+					<span class="products__price">RS:650</span>
+
+					<button class="products__button">
+						<i class='bx bx-shopping-bag'></i>
+					</button>
+				</article>
+
+				<article class="products__card">
+					<img src="https://secureservercdn.net/166.62.105.245/cn9.632.myftpupload.com/wp-content/uploads/2021/10/IMG_20211005_121130-01-300x300.jpeg" alt="" class="products__img">
+
+					<h3 class="products__title">6K Deodorizing Spray for Dogs</h3>
+					<span class="products__price">RS:950</span>
+
+					<button class="products__button">
+						<i class='bx bx-shopping-bag'></i>
+					</button>
+				</article>
+			</div>
+		</section>
+
+
+		<!--==================== NEWSLETTER ====================-->
+		<section class="newsletter section container">
+			<div class="newsletter__bg grid">
+				<div>
+					<h2 class="newsletter__title">Subscribe Our <br> Newsletter</h2>
+					<p class="newsletter__description">
+						Don't miss out on your discounts. Subscribe to our email 
+						newsletter to get the best offers, discounts, coupons, 
+						gifts and much more.
+					</p>
+				</div>
+
+				<form action="" class="newsletter__subscribe">
+					<input type="email" placeholder="Enter your email" class="newsletter__input">
+					<button class="button">
+						SUBSCRIBE
+					</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<!--==================== FOOTER ====================-->
+	<footer class="footer section">
+		<div class="footer__container container grid">
+			<div class="footer__content">
+				<h3 class="footer__title">Our information</h3>
+
+				<ul class="footer__list">
+					<li>1234 - Peru</li>
+					<li>La Libertad 43210</li>
+					<li>123-456-789</li>
+				</ul>
+			</div>
+			<div class="footer__content">
+				<h3 class="footer__title">About Us</h3>
+
+				<ul class="footer__links">
+					<li>
+						<a href="#" class="footer__link">Support Center</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">Customer Support</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">About Us</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">Copy Right</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer__content">
+				<h3 class="footer__title">Product</h3>
+
+				<ul class="footer__links">
+					<li>
+						<a href="#" class="footer__link">Food</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">Medicines</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">Clothes</a>
+					</li>
+					<li>
+						<a href="#" class="footer__link">Toys</a>
+					</li>
+				</ul>
+			</div>
+
+			
+		</div>
+
+		<span class="footer__copy">&#169; Pets Store. All rigths reserved</span>
+	</footer>
+
+	<!--=============== SCROLL UP ===============-->
+	<a href="#" class="scrollup" id="scroll-up"> 
+		<i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+	</a>
+
+	<!--=============== SWIPER JS ===============-->
+	<script src="assets/js/swiper-bundle.min.js"></script>
+
+	<!--=============== MAIN JS ===============-->
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
