@@ -304,6 +304,202 @@ $.noConflict();
 			}
 		},
 		
+		// Empties the cart by calling the _emptyCart() method
+		// @see jQuery.Shop._emptyCart()
+		
+		emptyCart: function() {
+			var self = this;
+			if( self.jQueryemptyCartBtn.length ) {
+				self.jQueryemptyCartBtn.on( "click", function() {
+					self._emptyCart();
+				});
+			}
+		},
+		
+		// Updates the cart
+		
+		updateCart: function() {
+			var self = this;
+		  if( self.jQueryupdateCartBtn.length ) {
+			self.jQueryupdateCartBtn.on( "click", function() {
+				var jQueryrows = self.jQueryformCart.find( "tbody tr" );
+				var cart = self.storage.getItem( self.cartName );
+				var shippingRates = self.storage.getItem( self.shippingRates );
+				var total = self.storage.getItem( self.total );
+				
+				var updatedTotal = 0;
+				var totalQty = 0;
+				var updatedCart = {};
+				updatedCart.items = [];
+				
+				jQueryrows.each(function() {
+					var jQueryrow = jQuery( this );
+					var pname = jQuery.trim( jQueryrow.find( ".pname" ).text() );
+					var pqty = self._convertString( jQueryrow.find( ".pqty > .qty" ).val() );
+					var pprice = self._convertString( self._extractPrice( jQueryrow.find( ".pprice" ) ) );
+					
+					var cartObj = {
+						product: pname,
+						price: pprice,
+						qty: pqty
+					};
+					
+					updatedCart.items.push( cartObj );
+					
+					var subTotal = pqty * pprice;
+					updatedTotal += subTotal;
+					totalQty += pqty;
+				});
+				
+				self.storage.setItem( self.total, self._convertNumber( updatedTotal ) );
+				self.storage.setItem( self.shippingRates, self._convertNumber( self._calculateShipping( totalQty ) ) );
+				self.storage.setItem( self.cartName, self._toJSONString( updatedCart ) );
+				
+			});
+		  }
+		},
+		
+		// Adds items to the shopping cart
+		
+		handleAddToCartForm: function() {
+			var self = this;
+			self.jQueryformAddToCart.each(function() {
+				var jQueryform = jQuery( this );
+				var jQueryproduct = jQueryform.parent();
+				var price = self._convertString( jQueryproduct.data( "price" ) );
+				var name =  jQueryproduct.data( "name" );
+				
+				jQueryform.on( "submit", function() {
+					var qty = self._convertString( jQueryform.find( ".qty" ).val() );
+					var subTotal = qty * price;
+					var total = self._convertString( self.storage.getItem( self.total ) );
+					var sTotal = total + subTotal;
+					self.storage.setItem( self.total, sTotal );
+					self._addToCart({
+						product: name,
+						price: price,
+						qty: qty
+					});
+					var shipping = self._convertString( self.storage.getItem( self.shippingRates ) );
+					var shippingRates = self._calculateShipping( qty );
+					var totalShipping = shipping + shippingRates;
+					
+					self.storage.setItem( self.shippingRates, totalShipping );
+				});
+			});
+		},
+		
+		// Handles the checkout form by adding a validation routine and saving user's info into the session storage
+		
+		handleCheckoutOrderForm: function() {
+			var self = this;
+			if( self.jQuerycheckoutOrderForm.length ) {
+				var jQuerysameAsBilling = jQuery( "#same-as-billing" );
+				jQuerysameAsBilling.on( "change", function() {
+					var jQuerycheck = jQuery( this );
+					if( jQuerycheck.prop( "checked" ) ) {
+						jQuery( "#fieldset-shipping" ).slideUp( "normal" );
+					} else {
+						jQuery( "#fieldset-shipping" ).slideDown( "normal" );
+					}
+				});
+				
+				self.jQuerycheckoutOrderForm.on( "submit", function() {
+					var jQueryform = jQuery( this );
+					var valid = self._validateForm( jQueryform );
+					
+					if( !valid ) {
+						return valid;
+					} else {
+						self._saveFormData( jQueryform );
+					}
+				});
+			}
+		},
+		
+		// Private methods
+		
+		
+		// Empties the session storage
+		
+		_emptyCart: function() {
+			this.storage.clear();
+		},
+		
+		/* Format a number by decimal places
+		 * @param num Number the number to be formatted
+		 * @param places Number the decimal places
+		 * @returns n Number the formatted number
+		 */
+		 
+		 
+		
+		_formatNumber: function( num, places ) {
+			var n = num.toFixed( places );
+			return n;
+		},
+		
+		/* Extract the numeric portion from a string
+		 * @param element Object the jQuery element that contains the relevant string
+		 * @returns price String the numeric string
+		 */
+		
+		
+		_extractPrice: function( element ) {
+			var self = this;
+			var text = element.text();
+			var price = text.replace( self.currencyString, "" ).replace( " ", "" );
+			return price;
+		},
+		
+		/* Converts a numeric string into a number
+		 * @param numStr String the numeric string to be converted
+		 * @returns num Number the number
+		 */
+		
+		_convertString: function( numStr ) {
+			var num;
+			if( /^[-+]?[0-9]+\.[0-9]+jQuery/.test( numStr ) ) {
+				num = parseFloat( numStr );
+			} else if( /^\d+jQuery/.test( numStr ) ) {
+				num = parseInt( numStr, 10 );
+			} else {
+				num = Number( numStr );
+			}
+			
+			if( !isNaN( num ) ) {
+				return num;
+			} else {
+				console.warn( numStr + " cannot be converted into a number" );
+				return false;
+			}
+		},
+		
+		/* Converts a number to a string
+		 * @param n Number the number to be converted
+		 * @returns str String the string returned
+		 */
+		
+		_convertNumber: function( n ) {
+			var str = n.toString();
+			return str;
+		},
+		
+		/* Converts a JSON string to a JavaScript object
+		 * @param str String the JSON string
+		 * @returns obj Object the JavaScript object
+		 */
+		
+		_toJSONObject: function( str ) {
+			var obj = JSON.parse( str );
+			return obj;
+		},
+		
+		/* Converts a JavaScript object to a JSON string
+		 * @param obj Object the JavaScript object
+		 * @returns str String the JSON string
+		 */
+		
 		
 		_toJSONString: function( obj ) {
 			var str = JSON.stringify( obj );
@@ -450,3 +646,4 @@ $.noConflict();
 	});
 
 })( jQuery );
+		
