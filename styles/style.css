@@ -492,3 +492,150 @@ form input.qty {
 	
 }
 
+/*-------team-------*/
+#team
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #555;
+	
+}
+
+h1
+{
+	text-align: center;
+	color: #2e0101!important;
+	padding-bottom: 10px;
+}
+
+h1::after
+{
+	content:'';
+	background: #d9b099;
+	display: block;
+	height: 3px;
+	width: 170px;
+	margin: 20px auto 5px;
+}
+
+.profile-pic .img-box
+{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+
+.profile-pic .img-box img
+{
+	filter: grayscale(1);
+	
+}
+
+.profile-pic .img-box img:hover
+{
+	filter: grayscale(0);
+	cursor: pointer;
+	
+}
+
+.profile-pic h2
+{
+	font-size: 22px;
+	font-weight: bold;
+	margin-top:15px;
+	color: #007bff!important;
+	
+}
+
+.profile-pic h3
+{
+	font-size: 15px;
+	font-weight: bold;
+	margin-top:15px;
+	color: black;
+	
+}
+
+#team .fa
+{
+	height:25px;
+	width: 25px;
+	color: #007bff !important;
+	background: #fff;
+	padding: 4px;
+	border-radius: 50%;
+}
+
+.img-box ul
+{
+	padding: 15px 0;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.img-box ul li
+{
+	padding: 5px;
+	display: inline-block;
+}
+
+.img-box:hover ul
+{
+	opacity: 1;
+	
+}
+
+.img-box ul, .img-box ul
+{
+	transition: 0.5s;
+}
+
+.img-responsive
+{
+	height: 250px;
+	width: 200px;
+	margin: 0px 50px;
+	
+	
+}
+
+
+/*-------contact---------*/
+
+#contact
+{
+	background: #efefef;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #777;
+
+}
+
+.contact-form
+{
+	padding: 15px;
+}
+
+::placeholder
+{
+	color: #999!important;
+}
+
+.follow
+{
+	background: #fff;
+	padding: 10px;
+	margin: 15px;
+}
+
+.contact-info .fa
+{
+	margin: 10px;
+	color: #007bff;
+	font-weight: bold;
+}
+
