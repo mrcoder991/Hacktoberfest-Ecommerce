@@ -191,3 +191,304 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0 1em;
 }
 
+
+/*-----product-top css-------*/
+
+.product-top img
+{
+	width: 100%;
+	
+}
+.overlay-right
+{
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 10%;
+	margin-left: 0;
+	width: 70px;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	
+}
+.overlay-right .fa
+{
+	cursor: pointer;
+	background-color: #fff;
+	color: #000;
+	height: 35px;
+	width: 35px;
+	font-size: 20px;
+	padding: 7px;
+	margin-bottom: 5%;
+	margin-top: 10px;;
+	 
+
+}
+.overlay-right .btn-secondary
+{
+	background: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+.product-top:hover .overlay-right
+{
+	opacity: 1;
+	margin-left: 5%;
+	transition: 0.5s;
+}
+
+.product-bottom h3
+{
+	font-size: 28px;
+	padding-bottom: 10px; 
+}
+
+#masthead {
+	margin-top: 3em;
+	padding: 2em 0 0.5em 0;
+	border-bottom: 1px solid #ddd;
+}
+
+#masthead h1 {
+	margin: 0;
+	font-size: 3.5em;
+	overflow: hidden;
+	padding-left: 85px;
+	min-height: 82px;
+	line-height: 2.3;
+	
+	
+	
+}
+
+.tagline {
+	float: right;
+	color: #15c93c;
+	font-size: 14px;
+	padding-top: 3.5em;
+}
+
+#products ul {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+#products li {
+	float: left;
+	width: 31%;
+	margin: 0 1%;
+	display: block;
+}
+
+.product-image {
+	width: 100%;
+	padding: 20px 0;
+	transition: 1s;
+	cursor: pointer;
+	height: 300px;
+	overflow: hidden;
+	
+}
+
+.product-description {
+	
+	
+	color: black;
+	border-radius: 5px;
+}
+
+.product-name {
+	text-align: center;
+	color: black;
+	margin: 0;
+	font-size: 1.4em;
+	
+	
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+.product-price {
+	width: 2.7em;
+	height: 2em;
+	font-size: 1.7em;
+	text-align: center;
+	margin-left: 90px;
+	background: #fff;
+	color: black;
+	
+}
+
+form.add-to-cart div
+{
+	text-align: center;
+	color: black;
+
+	
+	
+}
+
+form.add-to-cart p 
+{
+	text-align: center;
+	
+	color: #c94815;
+}
+
+form.add-to-cart p .btn
+{
+	text-align: center;
+	
+	color: white;
+	background: red;
+	margin-bottom: 40px;
+}
+
+
+form input.qty {
+	width: 60px;
+	border: 2px solid #eee;
+	font: 1.5em 'PT Serif', serif;
+	background: #f9f9f9;
+	color: #000;
+	border-radius: 3px;
+	margin-left: 0.4em;
+	
+}
+
+.btn{
+	display: inline-block;
+	background: #800;
+	color: white;
+	
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid white;
+}
+ a.btn {
+	display: inline-block;
+	background: #cc1400;
+	color: #fff;
+	font: 1em 'PT Serif', serif;
+	padding: 0.3em 1em;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid #a00;
+}
+
+
+#slider
+{
+	width: 100%;
+}
+
+#about
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color:#555;
+}
+
+
+#about .btn
+{
+	margin-top:20px;
+	margin-bottom:30px;
+	
+}
+
+.about-content
+{
+	padding-top: 20px;
+}
+
+.skills-bar p
+{
+	margin-bottom:6px;
+	font-weight: 600;
+}
+
+.progress-bar
+{
+	border-radius:16px;
+}
+
+.progress
+{
+	border-radius:16px!important;
+	margin-bottom: 20px;
+	
+}
+
+#services
+{
+	background: black;
+	background-size: cover;
+	background-position: center;
+	color:#555!important;
+	background-attachment: fixed;
+	padding-top:50px;
+	padding-bottom: 50px;
+}
+
+
+
+#services h1
+{
+	text-align: center;
+	color:#fff!important;
+	padding-bottom: 10px;
+}
+
+#services h1::after
+{
+	content: '';
+	background:#efefef;
+	display: block;
+	height:3px;
+	width:170px;
+	margin: 20px auto 5px;
+}
+#services h3
+{
+	font-weight: 400;
+	color: white;
+	margin: auto;
+}
+#services p
+{
+	font-weight: 400;
+	color: white;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+#services i
+{
+	
+	color: white;
+}
+
+.icon
+{
+	font-size:40px;
+	margin:20px auto;
+	padding: 20px;
+	height: 80px;
+	width:80px;
+	border:1px solid #fff;
+	border-radius:50%;
+}
+
+.services .col-md-4:hover{
+	background:#007bff;
+	cursor: pointer;
+	transition: 0.7s;
+	
+}
+
