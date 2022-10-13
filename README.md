@@ -8,6 +8,9 @@
 This repository is mainly open to those who are looking to make some PR for the Hacktoberfest event, and to get started with GitHub and the open-source world.
 In this repository, you will have to work in an ecommerce website where you can enhance the user interface and adding new pages and features, Documentation by add meaningfull comments and adding proper readme.md files.
 
+### Tech Stack
+<img alt="HTML" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="JS" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+
 ### Why contribute to this repository
 - Beginner-friendly
 - Create your first Pull Request on GitHub
@@ -22,3 +25,11 @@ In this repository, you will have to work in an ecommerce website where you can 
 [Creating a pull request](https://services.github.com/on-demand/intro-to-github/create-pull-request)
 
 [Learn the Git basics](https://try.github.io)
+
+### OUR VALUABLE CONTRIBUTORS✨
+  
+	
+<a href="https://github.com/mrcoder991/Hacktoberfest-Ecommerce/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mrcoder991/Hacktoberfest-Ecommerce" />
+</a>
+</p>
