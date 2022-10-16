@@ -698,3 +698,13 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	display: inline-block;
 	margin-right: 1em;
 }
+#pricing {
+	padding: 0.5em;
+	margin: 1em 0;
+	background: #fafafa;
+}
+
+#sub-total, #shipping {
+	margin: 1.5em 0;
+	text-align: right;
+}
