@@ -680,3 +680,11 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 .shopping-cart td.pdelete {
 	text-align: center;
 }
+.pdelete a,
+.pdelete a:hover {
+	color: #c00;
+	text-decoration: none;
+	font-size: 2.5em;
+	display: block;
+	text-align: center;
+}
