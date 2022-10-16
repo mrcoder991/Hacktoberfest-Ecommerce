@@ -688,3 +688,9 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	display: block;
 	text-align: center;
 }
+#shopping-cart-actions {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
