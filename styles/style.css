@@ -639,3 +639,15 @@ h1::after
 	font-weight: bold;
 }
 
+#site-info {
+	
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: #c94815;
+	position: absolute;
+	color: #fff;
+	left: 0;
+	bottom: 0;
+	line-height: 1.9em;
+}
