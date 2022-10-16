@@ -673,3 +673,14 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	table-layout: fixed;
 }
 
+#shopping-cart-actions {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+#shopping-cart-actions li {
+	display: inline-block;
+	margin-right: 1em;
+}
