@@ -651,3 +651,12 @@ h1::after
 	bottom: 0;
 	line-height: 1.9em;
 }
+
+body#checkout-page  #site-info, body#cart-page #site-info {
+	position: static;
+}
+
+.cartcontent
+{
+	min-height: 86vh;
+}
