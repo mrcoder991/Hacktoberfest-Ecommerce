@@ -673,3 +673,10 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	table-layout: fixed;
 }
 
+.shopping-cart tr:nth-child(even) {
+	background: #fafafa;
+}
+
+.shopping-cart td.pdelete {
+	text-align: center;
+}
