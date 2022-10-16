@@ -660,3 +660,16 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 {
 	min-height: 86vh;
 }
+
+#shopping-cart {
+	margin: 1.5em 0;
+}
+
+.shopping-cart {
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
