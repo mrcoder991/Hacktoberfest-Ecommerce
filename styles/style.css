@@ -673,3 +673,13 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	table-layout: fixed;
 }
 
+#pricing {
+	padding: 0.5em;
+	margin: 1em 0;
+	background: #fafafa;
+}
+
+#sub-total, #shipping {
+	margin: 1.5em 0;
+	text-align: right;
+}
