@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scal=1.0" />
+    <meta http-equip="X-UA-compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="styles/style.css"
+      media="screen"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="scripts/jquery.store.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
+    
+<link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <h1>MerchStore</h1>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#new-arrivals"
+              >Products</a
+            >
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="cart.html">Cart</a>
+          </li>
+
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#about">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="#services"
+              >Our Services</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              style="color: black"
+              class="nav-link"
+              href="#team"
+              tabindex="-1"
+              aria-disabled="true"
+              >Our Team</a
+            >
+          </li>
+          <li class="nav-item">
+            <a style="color: black" class="nav-link" href="contact.html"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="contact-form">
+      <div class="contain">
+        <div class="wrapper">
+          <div class="form">
+            <h4>GET IN TOUCH</h4>
+            <h2 class="form-headline">Send us a message</h2>
+            <form id="submit-form" action="">
+              <p>
+                <input
+                  id="name"
+                  class="form-input"
+                  type="text"
+                  placeholder="Your Name*"
+                />
+                <small class="name-error"></small>
+              </p>
+              <p>
+                <input
+                  id="email"
+                  class="form-input"
+                  type="email"
+                  placeholder="Your Email*"
+                />
+                <small class="name-error"></small>
+              </p>
+
+              <p class="full-width">
+                <textarea
+                  minlength="20"
+                  id="message"
+                  cols="30"
+                  rows="7"
+                  placeholder="Your Message*"
+                  required
+                ></textarea>
+                <small></small>
+              </p>
+              <p class="full-width">
+                <input type="checkbox" id="checkbox" name="checkbox" checked />
+                Yes, I would like to receive communications by call / email
+                about Company's services.
+              </p>
+              <p class="full-width">
+                <input
+                  type="submit"
+                  class="submit-btn"
+                  value="Submit"
+                  onclick="checkValidations()"
+                />
+                <button class="reset-btn" onclick="reset()">Reset</button>
+              </p>
+            </form>
+          </div>
+
+          <div class="contacts contact-wrapper">
+            <ul>
+              <li>
+                For any Query or Problem contact us.
+                <span class="highlight-text-grey"> We Are Here </span> for our
+                consumers. Ready to know how we can help you?
+              </li>
+              <span class="hightlight-contact-info">
+                <li class="email-info">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  info@demo.com
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span class="highlight-text">+91 11 1111 2900</span>
+                </li>
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/scripts/contact.js"></script>
+  </body>
+</html>
