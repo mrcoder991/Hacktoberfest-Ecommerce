@@ -733,3 +733,9 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	margin-bottom: 1.3em;
 }
 
+#checkout-order-form legend {
+	padding: 0.3em;
+	background: #fafafa;
+	font-weight: bold;
+}
+
