@@ -718,3 +718,7 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	font-size: 2em;
 	text-align: center;
 }
+#pricing #sub-total,
+#pricing #shipping {
+	margin: 1em 0;
+}
