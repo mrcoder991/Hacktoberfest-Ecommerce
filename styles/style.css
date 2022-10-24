@@ -742,3 +742,10 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 #checkout-order-form div {
 	margin-bottom: 1em;
 }
+
+#checkout-order-form label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 0.3em;
+	text-align: left;
+}
