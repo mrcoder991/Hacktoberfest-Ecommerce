@@ -713,3 +713,8 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 #shipping span {
 	margin-left: 1em;
 }
+#content > h1,
+#checkout-order-form h2 {
+	font-size: 2em;
+	text-align: center;
+}
