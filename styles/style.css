@@ -708,3 +708,8 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	margin: 1.5em 0;
 	text-align: right;
 }
+
+#sub-total span,
+#shipping span {
+	margin-left: 1em;
+}
