@@ -722,3 +722,7 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 #pricing #shipping {
 	margin: 1em 0;
 }
+
+#checkout-order-form {
+	margin: 1.5em 0;
+}
