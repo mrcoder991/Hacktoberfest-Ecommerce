@@ -739,3 +739,6 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 	font-weight: bold;
 }
 
+#checkout-order-form div {
+	margin-bottom: 1em;
+}
