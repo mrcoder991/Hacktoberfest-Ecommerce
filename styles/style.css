@@ -726,3 +726,10 @@ body#checkout-page  #site-info, body#cart-page #site-info {
 #checkout-order-form {
 	margin: 1.5em 0;
 }
+#checkout-order-form fieldset {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 1em;
+	margin-bottom: 1.3em;
+}
+
